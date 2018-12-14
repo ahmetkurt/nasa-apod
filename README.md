@@ -1,3 +1,7 @@
+# 🔭 NASA APOD
+
+Display of randomly fetched 5 astronomy pictures and its descriptions using the [**Create React App**](https://facebook.github.io/create-react-app/) and the [**NASA APOD API**](https://api.nasa.gov/api.html#apod).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

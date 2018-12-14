@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Axios from 'axios';
+import Apod from './components/Apod';
 import './App.css';
 
+const apiUrl = 'https://api.nasa.gov/planetary/apod';
+const apiKey = 'oyawjteM6olB2SkfPrIIzcnHK0uMhjOhCydyA0gR';
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: [],
+    };
+  }
+
+  componentDidMount() {
+    Axios
+      .get(`${apiUrl}?api_key=${apiKey}&count=5`)
+      .then((Response) => {
+        const responseData = Response.data;
+
+        this.setState({ data: responseData });
+      });
+  }
+
   render() {
+    const { data } = this.state;
+    const apods = data.map(item => <Apod item={item} key={Date.parse(item.date)} />);
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <section className="section section--apod">
+        {apods}
+      </section>
     );
   }
 }

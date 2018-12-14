@@ -1,17 +1,36 @@
 {
   "name": "nasa-apod",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+  "description": "Display of randomly fetched 5 astronomy pictures and its descriptions using the Create React App and the NASA APOD API.",
+  "author": "Ahmet Kurt",
+  "license": "ISC",
+  "homepage": "https://github.com/ahmetkurt/nasa-apod#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmetkurt/nasa-apod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmetkurt/nasa-apod/issues"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1"
   },
   "eslintConfig": {
     "extends": "react-app"

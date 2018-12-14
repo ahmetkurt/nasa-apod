@@ -1,0 +1,62 @@
+.apod {
+    display: flex;
+    flex-basis: 320px;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: calc(320px - 2 * .5rem);
+    max-height: 900px;
+    border: 1px solid #000;
+    margin: .25rem;
+  }
+  
+  .apod__figure {
+    margin: 0;
+  }
+  
+  .apod__image {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+  }
+  
+  .apod__video {
+    display: block;
+    width: 100%;
+    height: 360px;
+    border: none;
+  }
+  
+  .apod__copyright {
+    padding: .625rem 1.25rem;
+    background-color: #cff4ff;
+    font-size: .75rem;
+  }
+  
+  .apod__header {
+    padding: 1.25rem;
+    background-color: #8dddff;
+  }
+  
+  .apod__title {
+    margin: 0;
+  }
+  
+  .apod__date {
+    font-size: .875rem;
+  }
+  
+  .apod__explanation {
+    overflow: auto;
+    padding-right: 1.25rem;
+    margin: 1.25rem .625rem 1.25rem 1.25rem;
+  }
+  
+  .apod__explanation::first-letter {
+    float: left;
+    padding: .3125rem .3125rem 0 0;
+    font-size: 3.75rem;
+    font-weight: 600;
+    line-height: 2.8125rem;
+  }
+  
